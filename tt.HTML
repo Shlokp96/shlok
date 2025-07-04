@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+    <style>
+        body {
+            transition: 0.4s;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .main-section {
+            width: 100%;
+            height: 120vh;
+        }
+
+        .top {
+            width: 100%;
+            height: 10vh;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .top h2 {
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main-section">
+
+        <div class="top">
+            <h2 id="greet">hello</h2>
+        </div>
+
+
+
+    </div>
+
+    <script>
+
+        function timeShow(){
+
+            let now = new Date;
+            let timeSecond = now.getHours(); // Hook function ()
+            let greetr = "";
+
+             if(timeSecond >= 5 && timeSecond <= 11 ){
+
+                greetr = "Good MORING ☀️";
+
+             }
+
+             else if(timeSecond >= 12 && timeSecond  <= 16 ){
+
+                greetr =  "Good Afternoon 🕑";
+
+             }
+
+             else if(timeSecond >= 17 && timeSecond <= 20 ){
+
+                greetr =  "Good Evening ☀️";
+
+             }
+
+             else if(timeSecond >= 21 && timeSecond <= 4 ){
+
+                greetr =  " Good night 🌃 ";
+
+             }
+
+             else{
+                greetr =  " Good night 🌃";
+             }
+
+             document.getElementById("greet").innerHTML = greetr;
+
+        }
+        timeShow();
+
+
+
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
